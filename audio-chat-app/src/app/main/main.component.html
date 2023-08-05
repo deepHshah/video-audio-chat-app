@@ -1,0 +1,33 @@
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="video-container">
+          <div id="video-grid" class="video-grid"></div>
+        </div>
+        <div class="controls mt-3 d-flex justify-content-center">
+          <button class="btn btn-primary" (click)="toggleChat()">Open Chat</button>
+          <button class="btn btn-primary" (click)="toggleMute()">Mute Audio</button>
+          <button class="btn btn-primary" (click)="toggleVideo()">Mute Video</button>
+          <button class="btn btn-primary" (click)="invitePeople()">Invite People</button>
+        </div>
+      </div>
+      <div class="col-md-4 mt-3">
+        <div *ngIf="showChat" class="chat-container">
+          <div class="chat-messages overflow-auto">
+            <div *ngFor="let message of messages" class="chat-message bg-light p-2 mb-2">
+              <span>{{ message.userName }}:</span> {{ message.text }}
+            </div>
+          </div>
+          <div class="chat-input input-group">
+            <input type="text" class="form-control" [(ngModel)]="messageText" (keydown.enter)="sendMessage(messageText)" />
+            <div class="input-group-append">
+              <button class="btn btn-primary" (click)="sendMessage(messageText)">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+

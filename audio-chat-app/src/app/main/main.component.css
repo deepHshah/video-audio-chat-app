@@ -1,0 +1,113 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  background-color: #f0f0f0; /* Light gray color for background */
+  font-family: "Poppins", sans-serif;
+}
+
+.video-container {
+  text-align: center;
+}
+
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+video {
+  height: 300px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 5px;
+  background-color: #000;
+  transform: scaleX(-1); /* Flip the video horizontally */
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.btn-primary {
+  background-color: #007aff; /* WhatsApp blue color for buttons */
+  color: #fff; /* White text for buttons */
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0061cc; /* Slightly darker shade of WhatsApp blue on hover */
+}
+
+.chat-container {
+  margin-top: 10px;
+  background-color: #f0f0f0; /* Light gray background for chat container */
+  border-radius: 5px;
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  max-height: 200px;
+  overflow-y: scroll;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.chat-message {
+  background-color: #fff; /* White background for chat messages */
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+}
+
+input[type="text"] {
+  flex: 1;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-primary[type="submit"] {
+  background-color: #007aff; /* WhatsApp blue color for send button */
+  color: #fff; /* White text for send button */
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-primary[type="submit"]:hover {
+  background-color: #0061cc; /* Slightly darker shade of WhatsApp blue on hover */
+}
+
+@media screen and (max-width: 768px) {
+  video {
+    width: 100%;
+    height: auto;
+  }
+
+  .chat-messages {
+    max-height: 150px;
+  }
+}
